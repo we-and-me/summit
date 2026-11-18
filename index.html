@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Connectors Summit Home</title>
+<meta name="description" content="Everything for Connectors Summit 2026 in one place: the checklist, the schedule, the hallway, and the replays.">
+<meta name="theme-color" content="#1071B9">
+<meta property="og:title" content="Connectors Summit Home">
+<meta property="og:description" content="Four buttons. Everything you need for the summit.">
+<style>
+@font-face{font-family:"AG";src:url(assets/ag.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Figtree";src:url(assets/fig-r.ttf) format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"Figtree";src:url(assets/fig-b.ttf) format("truetype");font-weight:700;font-display:swap}
+:root{
+  --blue:#1071B9;--blue-d:#0B5A94;--sky:#58ABDC;--sky-d:#3A8BBE;--purple:#903F97;--purple-d:#6E2C74;
+  --green:#8CC640;--green-d:#6BA51F;--ink:#4C4C50;--head:#3C3C3C;--muted:#6E6E75;--line:#E1E6EC;
+  --pale-b:#EDF4FA;--amber:#FDF3C8;--amber-d:#7A5A00;
+  --f-head:"AG","ITC Avant Garde Gothic Pro","Century Gothic","Futura",sans-serif;
+  --f-body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#FBFDFF;color:var(--ink);font-family:var(--f-body);font-size:18px;line-height:1.55;overflow-x:hidden}
+a{color:var(--blue)}
+img{max-width:100%;height:auto;display:block}
+h1,h2,.lede,.sub,.d,p,li{text-wrap:pretty}
+
+/* drifting watercolor blobs */
+.wash{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;background:linear-gradient(180deg,#FFFFFF 0%,#F3F8FD 55%,#E6F1FA 100%)}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.42;will-change:transform}
+.b1{width:520px;height:520px;background:radial-gradient(circle,#58ABDC 0%,transparent 68%);top:-160px;left:-140px}
+.b2{width:560px;height:560px;background:radial-gradient(circle,#B77ABD 0%,transparent 68%);top:120px;right:-220px}
+.b3{width:480px;height:480px;background:radial-gradient(circle,#8FC6EA 0%,transparent 68%);bottom:-200px;left:30%}
+
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* hero */
+header{text-align:center;padding:44px 0 10px}
+.when{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:18px}
+.chip{font-weight:700;font-size:14px;letter-spacing:.02em;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--head);box-shadow:0 2px 8px rgba(16,113,185,.06)}
+.chip.g{background:#F1F8E6;border-color:#DCEBC4;color:#4F7D14}
+.logo{width:min(560px,92%);margin:0 auto 6px}
+h1{font-family:var(--f-head);font-weight:700;color:var(--head);font-size:clamp(30px,5.2vw,50px);line-height:1.08;margin:14px 0 10px;letter-spacing:-.01em}
+.lede{font-size:clamp(17px,2.2vw,20px);color:var(--muted);margin:0 auto;max-width:560px}
+
+/* the four big buttons */
+.pads{display:grid;grid-template-columns:1fr 1fr;gap:26px 24px;margin:38px 0 14px}
+.pad{--c:var(--blue);--cd:var(--blue-d);--face:linear-gradient(160deg,#2288D2,#1071B9);
+  position:relative;display:block;text-decoration:none;color:#fff;border-radius:28px;
+  padding-bottom:12px;touch-action:manipulation;-webkit-tap-highlight-color:transparent;outline:none;
+  transform-style:preserve-3d;will-change:transform}
+.pad .base{position:absolute;left:0;right:0;bottom:0;top:12px;border-radius:28px;background:var(--cd);
+  box-shadow:0 18px 30px -12px rgba(11,40,80,.45)}
+.pad .face{position:relative;border-radius:28px;background:var(--face);padding:26px 26px 24px;min-height:170px;
+  display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px;overflow:hidden;will-change:transform;
+  box-shadow:inset 0 2px 0 rgba(255,255,255,.35),inset 0 -3px 0 rgba(0,0,0,.08)}
+.pad .face::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:radial-gradient(circle 150px at var(--gx,30%) var(--gy,0%),rgba(255,255,255,.34),transparent 100%)}
+.pad .ico{width:64px;height:64px;border-radius:20px;background:rgba(255,255,255,.18);display:grid;place-items:center;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
+.pad .ico svg{width:34px;height:34px}
+.pad .t{font-family:var(--f-head);font-size:clamp(22px,2.6vw,28px);line-height:1.1;display:block}
+.pad .d{display:block;font-size:16px;opacity:.92;margin-top:6px;line-height:1.35}
+.pad .go{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center;transition:transform .25s}
+.pad .go svg{width:20px;height:20px}
+.pad:hover .go,.pad:focus-visible .go{transform:translateX(4px)}
+.pad:focus-visible .face{box-shadow:inset 0 2px 0 rgba(255,255,255,.35),0 0 0 4px #fff,0 0 0 7px var(--c)}
+.pad.kbyg{--c:var(--sky);--cd:var(--sky-d);--face:linear-gradient(160deg,#6FBCE8,#4AA0D6)}
+.pad.sched{--c:var(--blue);--cd:var(--blue-d);--face:linear-gradient(160deg,#2288D2,#0F69AE)}
+.pad.hall{--c:#5A5AB0;--cd:#43418C;--face:linear-gradient(120deg,#1F7BC6 0%,#5C5FB4 55%,#8E45A0 100%)}
+.pad.reps{--c:var(--purple);--cd:var(--purple-d);--face:linear-gradient(160deg,#A253A9,#863A8D)}
+.badge{position:absolute;top:-12px;left:22px;z-index:3;background:var(--green);color:#fff;font-weight:700;font-size:13px;
+  letter-spacing:.04em;text-transform:uppercase;padding:5px 12px;border-radius:999px;box-shadow:0 6px 14px -6px rgba(80,130,20,.7)}
+.after{text-align:center;font-size:16px;color:var(--muted);margin:6px 0 0}
+.after a{font-weight:700;text-decoration:none}
+
+/* made easy */
+section.easy{padding:70px 0 20px}
+.eyebrow{font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--purple);text-align:center;margin:0}
+h2{font-family:var(--f-head);color:var(--head);font-size:clamp(28px,4.2vw,40px);line-height:1.1;text-align:center;margin:8px 0 10px}
+.sub{text-align:center;color:var(--muted);margin:0 auto 34px;max-width:540px}
+.plats{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.plat{background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px;box-shadow:0 20px 40px -28px rgba(16,60,110,.35);display:flex;flex-direction:column}
+.plat h3{font-family:var(--f-head);color:var(--head);font-size:26px;margin:0;display:flex;align-items:center;gap:12px}
+.num{width:34px;height:34px;flex:none}
+.plat .role{font-weight:700;color:var(--blue);margin:4px 0 14px}
+.plat.remo .role{color:var(--purple)}
+.shot{border-radius:16px;border:1px solid var(--line);overflow:hidden;background:#fff;margin:0 0 18px;box-shadow:0 10px 24px -16px rgba(0,0,0,.35)}
+.shot.circle{background:#fff;display:flex;justify-content:center}
+.shot.circle img{width:100%;max-width:340px;height:auto}
+.shot .bar{height:26px;background:#F1F3F6;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:6px;padding:0 10px}
+.shot .bar i{width:9px;height:9px;border-radius:50%;background:#D5DAE0;display:block}
+.shot .bar span{font-size:12px;color:var(--muted);margin-left:8px}
+.plat p{margin:0 0 12px}
+.steps{list-style:none;padding:0;margin:4px 0 16px;counter-reset:s}
+.steps li{position:relative;padding-left:40px;margin:0 0 12px}
+.steps li svg{position:absolute;left:0;top:1px;width:28px;height:28px}
+.callout{border-radius:18px;padding:16px 18px;margin:4px 0 16px}
+.callout.warn{background:var(--amber);border:1px solid #F2DF8E}
+.callout.warn strong{color:var(--amber-d)}
+.callout.tip{background:var(--pale-b);border:1px solid #D4E6F5;font-size:16px}
+.callout p{margin:0 0 8px}.callout p:last-child{margin:0}
+.cta{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:700;
+  color:#fff;background:var(--blue);border-radius:16px;padding:16px 22px;box-shadow:0 6px 0 var(--blue-d),0 14px 22px -10px rgba(16,113,185,.6);
+  transition:transform .12s,box-shadow .12s;font-size:17px}
+.cta:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--blue-d),0 18px 26px -10px rgba(16,113,185,.6)}
+.cta:active{transform:translateY(5px);box-shadow:0 1px 0 var(--blue-d),0 6px 10px -8px rgba(16,113,185,.6)}
+.plat.remo .cta{background:var(--purple);box-shadow:0 6px 0 var(--purple-d),0 14px 22px -10px rgba(144,63,151,.6)}
+.plat.remo .cta:hover{box-shadow:0 8px 0 var(--purple-d),0 18px 26px -10px rgba(144,63,151,.6)}
+.plat.remo .cta:active{box-shadow:0 1px 0 var(--purple-d)}
+
+footer{text-align:center;padding:50px 0 60px;color:var(--muted);font-size:16px}
+footer a{font-weight:700;text-decoration:none}
+
+/* splash particles */
+#fx{position:fixed;inset:0;pointer-events:none;z-index:50}
+
+@media (max-width:780px){
+  body{font-size:17px}
+  header{padding-top:30px}
+  .pads{grid-template-columns:1fr;gap:22px;margin-top:30px}
+  .pad .face{min-height:0;padding:20px 18px;gap:14px}
+  .pad .ico{width:52px;height:52px;border-radius:16px}
+  .pad .ico svg{width:28px;height:28px}
+  .pad .go{width:36px;height:36px}
+  .pad .t{font-size:21px;text-wrap:balance}
+  .pad.kbyg .face{padding-top:28px}
+}
+@media (max-width:480px){
+  .pad .face{grid-template-columns:auto 1fr}
+  .pad .go{display:none}
+  .chip{font-size:12px;padding:6px 10px;letter-spacing:0;white-space:nowrap}
+}
+@media (max-width:780px){
+  .plats{grid-template-columns:1fr}
+  .plat{padding:22px 18px}
+  section.easy{padding-top:56px}
+}
+@media (prefers-reduced-motion:reduce){.blob{display:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wash" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<div class="wrap">
+  <header>
+    <div class="when"><span class="chip g">Pre-conference + essential tech check: December 2</span><span class="chip">Main event: December 9 to 11</span></div>
+    <img class="logo" src="assets/cs26-wordmark.png" alt="Connectors Summit 2026" width="1000" height="260">
+    <h1>Your summit, one tap away.</h1>
+    <p class="lede">Everything you need. Bookmark this page and come back anytime.</p>
+  </header>
+
+  <nav class="pads" aria-label="Summit spaces">
+    <a class="pad kbyg" href="https://connectors.circle.so/c/summit-home" target="_blank" rel="noopener">
+      <span class="badge">Start here</span>
+      <span class="base"></span>
+      <span class="face">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 9l1.6 1.6L12.5 7.7M8 15l1.6 1.6 2.9-2.9M15 9h2M15 15h2"/></svg></span>
+        <span><span class="t">Know Before You Go</span><span class="d">Your 10-minute checklist to get fully ready.</span></span>
+        <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+      </span>
+    </a>
+    <a class="pad sched" href="https://connectors.circle.so/c/2025-summit-schedule" target="_blank" rel="noopener">
+      <span class="base"></span>
+      <span class="face">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/><circle cx="8.5" cy="14.5" r="1.2" fill="#fff"/><circle cx="12" cy="14.5" r="1.2" fill="#fff"/></svg></span>
+        <span><span class="t">Summit Schedule</span><span class="d">Every session and its live link, in your time zone.</span></span>
+        <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+      </span>
+    </a>
+    <a class="pad hall" href="https://connectors.circle.so/c/connections" target="_blank" rel="noopener">
+      <span class="base"></span>
+      <span class="face">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h7A2.5 2.5 0 0 1 16 6.5v4a2.5 2.5 0 0 1-2.5 2.5H9l-3.5 3v-3A2.5 2.5 0 0 1 4 10.5z"/><path d="M18.5 9.5h.5a1 1 0 0 1 1 1V15a2 2 0 0 1-2 2v2.5L15 17h-3"/></svg></span>
+        <span><span class="t">The Summit Hallway</span><span class="d">Say hello, share an insight, ask other attendees a question.</span></span>
+        <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+      </span>
+    </a>
+    <a class="pad reps" href="https://connectors.circle.so/c/recordings-resources-b7ba37" target="_blank" rel="noopener">
+      <span class="base"></span>
+      <span class="face">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10.5 9.3v5.4l4.5-2.7z" fill="#fff"/></svg></span>
+        <span><span class="t">Replays &amp; Resources</span><span class="d">Every recording and takeaway, available all year.</span></span>
+        <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+      </span>
+    </a>
+  </nav>
+  <p class="after">All four open in Circle, so you'll sign in first. <a href="#easy">Trouble signing in? Start here.</a></p>
+
+  <section class="easy" id="easy">
+    <p class="eyebrow">Summit tech made easy</p>
+    <h2>Just two platforms. That's it.</h2>
+    <p class="sub">Circle holds everything. Remo is where we meet live.</p>
+
+    <div class="plats">
+      <article class="plat circle">
+        <h3><svg class="num" viewBox="0 0 34 34"><circle cx="17" cy="17" r="17" fill="#1071B9"/><text x="17" y="17" text-anchor="middle" dominant-baseline="central" font-family="AG, sans-serif" font-weight="700" font-size="17" fill="#fff">1</text></svg>Circle</h3>
+        <p class="role">Your backstage pass</p>
+        <div class="shot circle"><img src="assets/circle-login.webp" alt="The Circle sign-in screen: Welcome to We and Me, with an email box and a Continue button" width="520" height="500" loading="lazy"></div>
+        <p>Every summit link, the schedule, and all the private resources live here. Because it's private, <strong>Circle needs a login.</strong></p>
+        <p><strong>Can't get in? Three quick fixes:</strong></p>
+        <ol class="steps">
+          <li><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#EDF4FA"/><text x="14" y="14" text-anchor="middle" dominant-baseline="central" font-family="Figtree, sans-serif" font-weight="700" font-size="14" fill="#1071B9">1</text></svg>Use the email you registered with. Your receipt shows which one.</li>
+          <li><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#EDF4FA"/><text x="14" y="14" text-anchor="middle" dominant-baseline="central" font-family="Figtree, sans-serif" font-weight="700" font-size="14" fill="#1071B9">2</text></svg>Forgot your password, or never set one? Use the reset button below.</li>
+          <li><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="14" fill="#EDF4FA"/><text x="14" y="14" text-anchor="middle" dominant-baseline="central" font-family="Figtree, sans-serif" font-weight="700" font-size="14" fill="#1071B9">3</text></svg>Check your spam folder for the reset email.</li>
+        </ol>
+        <div class="callout tip"><p><strong>Using "Continue with Google"?</strong> Only if that Google email matches the one you registered with. A different email opens a different, empty account.</p></div>
+        <a class="cta" href="https://connectors.circle.so/users/password/new" target="_blank" rel="noopener">Reset my Circle password</a>
+      </article>
+
+      <article class="plat remo">
+        <h3><svg class="num" viewBox="0 0 34 34"><circle cx="17" cy="17" r="17" fill="#903F97"/><text x="17" y="17" text-anchor="middle" dominant-baseline="central" font-family="AG, sans-serif" font-weight="700" font-size="17" fill="#fff">2</text></svg>Remo</h3>
+        <p class="role">Where we gather live</p>
+        <div class="shot"><div class="bar"><i></i><i></i><i></i><span>live.remo.co</span></div><img src="assets/remo.webp" alt="The Remo summit floor: small tables and lounges where attendees sit together on video" width="1400" height="788" loading="lazy"></div>
+        <p>Every live session happens in Remo, in small groups around virtual tables. You'll find each Remo link in the Summit Schedule.</p>
+        <div class="callout warn">
+          <p><strong>Test your tech before December 2.</strong></p>
+          <p>Use Chrome on a laptop or desktop. Phones and tablets don't work well.</p>
+          <p>On a work computer? Company firewalls and VPNs can block Remo. Run the gear test on the computer you'll actually use. If it fails, try a personal computer or ask your IT team to allow Remo.</p>
+        </div>
+        <p>Then join us for the Pre-Conference and an Essential Tech Check on December 2.</p>
+        <a class="cta" href="https://live.remo.co/geartest" target="_blank" rel="noopener">Run the Remo gear test</a>
+      </article>
+    </div>
+  </section>
+
+  <footer>Tried everything and still stuck? Email <a href="mailto:events@weand.me">events@weand.me</a> and we'll get you in.</footer>
+</div>
+
+<script>
+(()=>{
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine = matchMedia('(pointer: fine)').matches;
+
+/* ---- spring-driven push buttons ---- */
+const pads=[...document.querySelectorAll('.pad')];
+const S=pads.map((el,i)=>({el,face:el.querySelector('.face'),
+  rx:0,ry:0,vrx:0,vry:0,trx:0,try_:0,     // tilt
+  p:0,vp:0,tp:0,                           // press depth 0..1
+  y:reduce?0:-90,vy:0,ty:0,                // entrance drop
+  s:1,vs:0,ts:1,delay:i*90,born:performance.now()}));
+
+function spring(x,v,t,k,d,dt){const a=-k*(x-t)-d*v;v+=a*dt;x+=v*dt;return[x,v]}
+
+let last=performance.now();
+function tick(now){
+  const dt=Math.min(.032,(now-last)/1000);last=now;
+  for(const s of S){
+    if(now-s.born>s.delay){[s.y,s.vy]=spring(s.y,s.vy,s.ty,170,11,dt)}
+    [s.rx,s.vrx]=spring(s.rx,s.vrx,s.trx,180,16,dt);
+    [s.ry,s.vry]=spring(s.ry,s.vry,s.try_,180,16,dt);
+    [s.p,s.vp]=spring(s.p,s.vp,s.tp,520,s.tp?34:13,dt);
+    [s.s,s.vs]=spring(s.s,s.vs,s.ts,260,12,dt);
+    const op=reduce?1:Math.max(0,Math.min(1,1+s.y/90));
+    s.el.style.opacity=op;
+    s.el.style.transform=`perspective(900px) translateY(${s.y.toFixed(2)}px) rotateX(${s.rx.toFixed(2)}deg) rotateY(${s.ry.toFixed(2)}deg) scale(${s.s.toFixed(4)})`;
+    s.face.style.transform=`translateY(${(s.p*11).toFixed(2)}px)`;
+  }
+  drawFx(dt);
+  requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+setTimeout(()=>S.forEach(s=>{if(Math.abs(s.y)>1){s.y=0;s.vy=0;s.el.style.opacity=1}}),2500);
+
+pads.forEach((el,i)=>{
+  const s=S[i];
+  el.addEventListener('pointermove',e=>{
+    if(!fine||reduce)return;
+    const r=el.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+    s.trx=(.5-y)*9;s.try_=(x-.5)*9;
+    el.style.setProperty('--gx',(x*100)+'%');el.style.setProperty('--gy',(y*100)+'%');
+  });
+  el.addEventListener('pointerenter',()=>{if(!reduce)s.ts=1.025});
+  el.addEventListener('pointerleave',()=>{s.trx=0;s.try_=0;s.ts=1;s.tp=0});
+  el.addEventListener('pointerdown',()=>{s.tp=1;s.ts=.985});
+  el.addEventListener('pointerup',()=>{s.tp=0;s.ts=fine?1.025:1;});
+  el.addEventListener('pointercancel',()=>{s.tp=0;s.ts=1});
+  el.addEventListener('keydown',e=>{if(e.key===' '){e.preventDefault();s.tp=1}});
+  el.addEventListener('keyup',e=>{if(e.key===' '){s.tp=0;el.click()}});
+  el.addEventListener('click',e=>{
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.button===1)return;
+    if(reduce)return;
+    s.tp=0;s.vp=-14;s.vs=2.2;                 // pop back up with a bounce
+    const r=el.getBoundingClientRect();
+    const cx=e.clientX||r.left+r.width/2, cy=e.clientY||r.top+r.height/2;
+    splash(cx,cy,getComputedStyle(el).getPropertyValue('--c').trim());
+  });
+});
+window.addEventListener('pageshow',()=>S.forEach(s=>{s.tp=0;s.ts=1}));
+
+/* ---- paint-splash particles ---- */
+const cv=document.getElementById('fx'),cx2=cv.getContext('2d');let parts=[];
+function size(){const d=devicePixelRatio||1;cv.width=innerWidth*d;cv.height=innerHeight*d;cx2.setTransform(d,0,0,d,0,0)}
+size();addEventListener('resize',size);
+const pal=['#1071B9','#58ABDC','#903F97','#8CC640','#B77ABD'];
+function splash(x,y,c){
+  for(let i=0;i<34;i++){
+    const a=Math.random()*Math.PI*2,sp=180+Math.random()*420;
+    parts.push({x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp-220,r:3+Math.random()*7,
+      c:Math.random()<.55?c:pal[i%pal.length],life:1,decay:.9+Math.random()*.8});
+  }
+}
+function drawFx(dt){
+  cx2.clearRect(0,0,innerWidth,innerHeight);
+  parts=parts.filter(p=>p.life>0);
+  for(const p of parts){
+    p.vy+=1100*dt;p.vx*=.985;p.x+=p.vx*dt;p.y+=p.vy*dt;p.life-=p.decay*dt;
+    cx2.globalAlpha=Math.max(0,p.life)*.9;cx2.fillStyle=p.c;
+    cx2.beginPath();cx2.arc(p.x,p.y,p.r*(.6+p.life*.4),0,Math.PI*2);cx2.fill();
+  }
+  cx2.globalAlpha=1;
+}
+
+/* ---- blobs drift with the cursor ---- */
+if(!reduce){
+  const bl=[...document.querySelectorAll('.blob')];let mx=0,my=0,t0=performance.now();
+  addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+  (function drift(now){const t=(now-t0)/1000;
+    bl.forEach((b,i)=>{const k=(i+1)*22;
+      b.style.transform=`translate(${Math.sin(t*.18+i*2)*40+mx*k}px,${Math.cos(t*.15+i)*30+my*k}px)`});
+    requestAnimationFrame(drift)})(t0);
+}
+})();
+</script>
+</body>
+</html>
